@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script defer src="./static/js/main.js"></script>
+    <title>Smart Answer SHeet Evaluation</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/logo/favicon-16x16.png">
+    <link rel="manifest" href="./static/logo/site.webmanifest">
+    
+</head>
+  <body>
+  <div id="grade">
+    <div class="center" >
+      <h1><strong>Smart Answer Sheet Evaluation</strong></h1>
+        <p>What is Machine Learning?</p>
+        <div class="inputs">
+            <input type="file" id="image_input" accept="image/png, image/jpg"> 
+        </div>
+      <div class="sub">
+        <button id='btn'>Upload</button>
+      </div>
+    </div>
+    <div class="left" >
+        <h1><strong>Image Uploaded</strong></h1>
+        <div id="display_image"></div>
+    </div>
+    <div class="under" >
+        <h1><strong>Score</strong></h1>
+        <p id="score"><strong>Submit a Response</strong></p>
+    </div>
+  </div>
+</div>
+
+  <script>
+    $SCRIPT_ROOT = request.script_root|tojson ;
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
